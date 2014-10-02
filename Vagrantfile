@@ -18,5 +18,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |vb|
      vb.gui = true
   end
-  config.vm.provision :shell, :inline => $script
+  config.vm.provision :shell, :inline => $script, privileged: false
 end
